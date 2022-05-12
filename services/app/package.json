@@ -1,0 +1,15 @@
+{
+  "name": "@monita/app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dosenhub/monita/services/app"
+  },
+  "author": "Dian Hanifudin Subhi <dhanifudin@polinema.ac.id>",
+  "license": "MIT"
+}
