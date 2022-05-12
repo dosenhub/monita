@@ -1,0 +1,7 @@
+version: '3'
+services:
+  rabbitmq:
+    container_name: monitamq
+    build: rabbitmq
+    ports:
+      - "5672:5672"
