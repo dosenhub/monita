@@ -1,0 +1,16 @@
+{
+  "name": "@monita/cronapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dian Hanifudin Subhi <dhanifudin@polinema.ac.id>",
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^2.1.0",
+    "got": "^12.0.4"
+  }
+}
