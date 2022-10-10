@@ -1,0 +1,19 @@
+{
+  "name": "@monita/app-consumer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dosenhub/monita/services/app-consumer"
+  },
+  "author": "Dian Hanifudin Subhi <dhanifudin@polinema.ac.id>",
+  "license": "MIT",
+  "dependencies": {
+    "bullmq": "^2.1.3"
+  }
+}

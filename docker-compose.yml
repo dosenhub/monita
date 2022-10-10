@@ -1,7 +1,9 @@
 version: '3'
 services:
-  rabbitmq:
+  redis:
+    image: redis:alpine3.16
     container_name: monitamq
-    build: rabbitmq
     ports:
-      - "5672:5672"
+      - "6379:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes

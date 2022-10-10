@@ -2,9 +2,14 @@
   "name": "@monita/app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
+    "migrate": "knex --esm migrate:latest",
+    "migrate:make": "knex --esm migrate:make",
+    "rollback": "knex --esm migrate:rollback",
+    "seed": "knex --esm seed:run",
+    "seed:make": "knex --esm seed:make",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,5 +17,10 @@
     "url": "https://github.com/dosenhub/monita/services/app"
   },
   "author": "Dian Hanifudin Subhi <dhanifudin@polinema.ac.id>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bullmq": "^2.1.3",
+    "knex": "^2.3.0",
+    "sqlite3": "^5.1.2"
+  }
 }
