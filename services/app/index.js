@@ -35,7 +35,7 @@ const updateUrlStatus = async ({ id, status }) => {
 
   const uptimeSchedule = async (url) => {
     const { id, user_id } = url;
-    await queue.add(`${id}:${user_id}`,  url, { delay: 10000 });
+    await queue.add(`${id}:${user_id}`,  url, { delay: 60000 });
   }
 
   const users = await getUsers();

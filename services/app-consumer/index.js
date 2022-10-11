@@ -17,7 +17,7 @@ const QUEUE = 'monita:uptime';
     const { id, user_id, address, status } = job.data;
     const response = await uptime(address, status);
     console.log(`Checking ${address}...${new Date().toLocaleString()}`);
-    await queue.add(`${id}:${user_id}`,  {id, user_id, address, status: response.statusCode }, { delay: 10000 });
+    await queue.add(`${id}:${user_id}`,  {id, user_id, address, status: response.statusCode }, { delay: 60000 });
   }
 
   const worker = new Worker(QUEUE, checkUptime, redisConfiguration);
