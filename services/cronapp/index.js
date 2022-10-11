@@ -23,7 +23,7 @@ const updateUrlStatus = async ({ id, status }) => {
 }
 
 (async () => {
-  const job = new CronJob('* * * * * *', async () => {
+  const job = new CronJob('0 * * * * *', async () => {
     const users = await getUsers();
     users.forEach(async (user) => {
       const urls = await getUrls(user.id);
