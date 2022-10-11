@@ -9,6 +9,7 @@
     "migrate:make": "knex --esm migrate:make",
     "rollback": "knex --esm migrate:rollback",
     "seed": "knex --esm seed:run",
+    "seed:specific": "knex --esm seed:run --specific",
     "seed:make": "knex --esm seed:make",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

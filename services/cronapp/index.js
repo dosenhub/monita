@@ -29,9 +29,7 @@ const updateUrlStatus = async ({ id, status }) => {
       const urls = await getUrls(user.id);
       urls.forEach(async (url) => {
         const response = await uptime(url.address, url.status);
-        console.log(response);
         const row = await updateUrlStatus(url);
-        console.log(row);
       })
     });
   });
