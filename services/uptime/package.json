@@ -10,6 +10,8 @@
   "author": "Dian Hanifudin Subhi <dhanifudin@polinema.ac.id>",
   "license": "MIT",
   "dependencies": {
-    "got": "^12.0.4"
+    "got": "^12.0.4",
+    "html-differ": "^1.4.0",
+    "string-cosine-similarity": "^2.0.1"
   }
 }
