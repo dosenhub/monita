@@ -36,13 +36,11 @@ const updateSnapshot = async ({ id, body, defaced }) => {
   console.log('Starting cron job');
   const job = new CronJob('0 * * * * *', async () => {
     const users = await getUsers();
-    console.log(`checking users ${users.length}`);
     users.forEach(async (user) => {
       const urls = await getUrls(user.id);
       urls.forEach(async (url) => {
         console.log('checking url', url.address);
         const response = await uptime(url.address, { statusCode: url.status, body: url.body });
-        console.log(`address: ${url.address} message: ${response.message} defaced: ${response.defaced}`);
         const saveSnapshot = await updateSnapshot({ id: url.url_id, body: response.body, defaced: response.defaced });
         const row = await updateUrlStatus({ id: url.url_id, status: response.statusCode });
       })

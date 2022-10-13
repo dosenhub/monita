@@ -29,7 +29,7 @@ export default {
   production: {
     client: 'mysql',
     connection: {
-      database: 'monita',
+      database: 'monita_cron',
       user: 'monita',
       password: 'monita'
     },

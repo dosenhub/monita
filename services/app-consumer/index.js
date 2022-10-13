@@ -11,13 +11,13 @@ const QUEUE = 'monita:uptime';
     }
   };
 
+  console.log('Starting message queue worker');
   const queue = new Queue(QUEUE, redisConfiguration);
 
   const checkUptime = async (job) => {
-    const { id, user_id, address, status } = job.data;
-    const response = await uptime(address, status);
-    console.log(`Checking ${address}...${new Date().toLocaleString()}`);
-    await queue.add(`${id}:${user_id}`,  {id, user_id, address, status: response.statusCode }, { delay: 60000 });
+    const { user_id, url_id, address, status, body, defaced } = job.data;
+    const response = await uptime(address, { statusCode: status, body });
+    await queue.add(`${user_id}:${url_id}`,  {user_id, url_id, address, status: response.statusCode, body, defaced }, { delay: 60000 });
   }
 
   const worker = new Worker(QUEUE, checkUptime, redisConfiguration);
