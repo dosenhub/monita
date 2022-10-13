@@ -10,9 +10,11 @@ const __dirname = dirname(__filename);
 export default {
 
   development: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: __dirname + '/database/monita.sqlite3'
+      database: 'monita',
+      user: 'monita',
+      password: 'monita'
     },
     migrations: {
       directory: __dirname + '/database/migrations',
@@ -25,9 +27,11 @@ export default {
   },
 
   production: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: __dirname + '/database/monita.sqlite3'
+      database: 'monita',
+      user: 'monita',
+      password: 'monita'
     },
     migrations: {
       directory: __dirname + '/database/migrations',
