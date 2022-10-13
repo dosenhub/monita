@@ -4,7 +4,7 @@
  */
 exports.seed = async function(knex) {
   const  ITERATION = 2;
-  const  NUM =  1;
+  const  NUM =  500;
   // Deletes ALL existing entries
   await knex('urls').del()
 
